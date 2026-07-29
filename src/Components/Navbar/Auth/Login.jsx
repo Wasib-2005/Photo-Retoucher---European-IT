@@ -40,6 +40,7 @@ const Login = () => {
               Email
             </label>
             <input
+              required="true"
               type="email"
               name="email"
               id="loginEmail"
@@ -58,6 +59,7 @@ const Login = () => {
             </label>
             <div className="relative flex items-center">
               <input
+                required="true"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 id="loginPassword"
@@ -94,7 +96,10 @@ const Login = () => {
           </div>
 
           {/* Button */}
-          <button className="w-full bg-[#0041FF] text-white font-bold py-3 rounded-lg hover:bg-[#0036d9] transition-colors">
+          <button
+            type="submit"
+            className="w-full bg-[#0041FF] text-white font-bold py-3 rounded-lg hover:bg-[#0036d9] transition-colors"
+          >
             Sign In
           </button>
 
