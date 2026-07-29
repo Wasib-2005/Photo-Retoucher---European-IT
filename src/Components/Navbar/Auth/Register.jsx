@@ -41,6 +41,7 @@ const Register = () => {
               Name
             </label>
             <input
+              required="true"
               type="text"
               name="name"
               id="registerName"
@@ -58,6 +59,7 @@ const Register = () => {
               Email
             </label>
             <input
+              required="true"
               type="email"
               name="email"
               id="registerEmail"
@@ -89,10 +91,11 @@ const Register = () => {
 
               {/* Phone Number Field */}
               <input
+                required="true"
                 type="tel"
                 name="phone"
                 id="registerPhone"
-                placeholder="1700 000000"
+                placeholder="1705-0001111"
                 className="w-full px-4 py-2.5 text-sm outline-none bg-transparent"
               />
             </div>
@@ -108,6 +111,7 @@ const Register = () => {
             </label>
             <div className="relative flex items-center">
               <input
+                required="true"
                 type={showPassword ? "text" : "password"}
                 name="password"
                 id="registerPassword"
@@ -147,7 +151,10 @@ const Register = () => {
           </div>
 
           {/* Button */}
-          <button className="w-full bg-[#0041FF] text-white font-bold py-3 rounded-lg hover:bg-[#0036d9] transition-colors">
+          <button
+            type="submit"
+            className="w-full bg-[#0041FF] text-white font-bold py-3 rounded-lg hover:bg-[#0036d9] transition-colors"
+          >
             Sign Up
           </button>
 
