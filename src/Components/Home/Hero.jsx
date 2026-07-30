@@ -17,7 +17,7 @@ const Ellipse = [
 
 const Hero = () => {
   return (
-    <div className="relative w-screen min-h-screen overflow-x-hidden bg-white pt-10 pb-20 z-0">
+    <div className="relative w-screen min-h-screen overflow-x-hidden bg-white pt-10 pb-10 z-0">
       <img
         className="absolute bottom-0 left-0 max-w-[15%] pointer-events-none select-none -z-10"
         src={Left_crave}
