@@ -40,32 +40,32 @@ const Feacher = () => {
     },
     {
       img: {
-        rawImg: "/public/Cort/CortBefore.png",
-        edited: "/public/Cort/CortAfter.png",
+        rawImg: "/Cort/CortBefore.png",
+        edited: "/Cort/CortAfter.png",
       },
       title: "Image Masking",
       dec: "Enhance property photos with sky replacement, color correction",
     },
     {
       img: {
-        rawImg: "/public/Women/WomenBefore.png",
-        edited: "/public/Women/WomenAfter.png",
+        rawImg: "/Women/WomenBefore.png",
+        edited: "/Women/WomenAfter.png",
       },
       title: "Jewelry Retouching",
       dec: "Enhance property photos with sky replacement, color correction",
     },
     {
       img: {
-        rawImg: "/public/Ring/RingBefore.png",
-        edited: "/public/Ring/RingAfter.png",
+        rawImg: "/Ring/RingBefore.png",
+        edited: "/Ring/RingAfter.png",
       },
       title: "Photo Ecommerce Photo",
       dec: "Enhance property photos with sky replacement, color correction",
     },
     {
       img: {
-        rawImg: "/public/CarLogo/CarLogoBefore.png",
-        edited: "/public/CarLogo/CarLogoAfter.png",
+        rawImg: "/CarLogo/CarLogoBefore.png",
+        edited: "/CarLogo/CarLogoAfter.png",
       },
       title: "Product Photo",
       dec: "Enhance property photos with sky replacement, color correction",
@@ -107,7 +107,7 @@ const Feacher = () => {
             all the image solution you need.
           </p>
 
-          <div className="h-1.5 w-20 bg-[#0041FF] rounded-2xl" />
+          <div className="h-1.5 w-10 md:w-20 bg-[#0041FF] rounded-2xl" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full items-stretch lg:px-38">
             {homeCartData.map((cart, i) => (

@@ -6,6 +6,7 @@ import Left_crave from "../../assets/Left_crave.svg";
 import InfoSection from "../../Components/Home/InfoSection";
 import Feacher from "../../Components/Home/Feacher/Feacher";
 import Feacher1 from "../../Components/Home/Feacher1/Feacher1";
+import Feacher2 from "../../Components/Home/Feacher2/Feacher2";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
           <InfoSection />
           <Feacher />
           <Feacher1/>
+          <Feacher2/>
         </div>
       </div>
     </>

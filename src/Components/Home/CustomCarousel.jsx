@@ -37,6 +37,8 @@ const slides = [
   },
 ];
 
+const CarouselTimeig = Number(import.meta.env.VITE_CAROUSEL_MOVE) || 4000;
+
 const customCarouselTheme = {
   item: {
     wrapper: {
@@ -66,7 +68,8 @@ export function CustomCarousel() {
           indicators={false}
           leftControl={<></>}
           rightControl={<></>}
-          slide={2000}
+          slide={true}
+          slideInterval={CarouselTimeig}
           onSlideChange={(index) => setActive(index)}
         >
           {slides.map((s) => (

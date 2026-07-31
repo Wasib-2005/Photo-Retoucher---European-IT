@@ -8,38 +8,38 @@ const Feacher1 = () => {
   const cartDataFeacher1 = [
     {
       tiltle: "Edited by hand",
-      img: "/public/Fact/Fact1.svg",
+      img: "/Fact/Fact1.svg",
       dec: "Every edit is done by a professional retouches, not a machine, for a complete control and the cleanest edges.",
     },
     {
       tiltle: "Pixel perfect results",
-      img: "/public/Fact/Fact2.svg",
+      img: "/Fact/Fact2.svg",
       dec: "Our designers can handle even the most complex cutouts — no straight polygonal lasso lines where they shouldn’t be.",
     },
     {
       tiltle: "24/7 support",
-      img: "/public/Fact/Fact3.svg",
+      img: "/Fact/Fact3.svg",
       dec: "Your dedicated customer support team is ready to help, whenever you need us.",
     },
     {
       tiltle: "6-hour turnaround",
-      img: "/public/Fact/Fact4.svg",
+      img: "/Fact/Fact4.svg",
       dec: "Get your images back in as little as six hours, even if you have thousands of shots to get through.",
     },
     {
       tiltle: "Under budget",
-      img: "/public/Fact/Fact5.svg",
+      img: "/Fact/Fact5.svg",
       dec: "Edits start at just $0.25 per image, way less than it would cost to do it in-house. #0041FF view our pricing options #",
     },
     {
       tiltle: "Every format",
-      img: "/public/Fact/Fact6.svg",
+      img: "/Fact/Fact6.svg",
       dec: "Get consistent, quality images in every format you need.",
     },
   ];
 
   return (
-    <section className="bg-[#f0f3fa] relative overflow-hidden py-12 md:py-25 text-[#1B263B]">
+    <section className="bg-[#f0f3fa] relative overflow-hidden py-12 md:py-25 text-[#1B263B] ">
       {/* Top Right Decorative SVG */}
       <img
         src={Top_carve}
@@ -74,6 +74,8 @@ const Feacher1 = () => {
             From simple clipping paths to advanced photo retouching, we provide
             all the image solution you need.
           </p>
+
+          <div className="h-1.5 w-10 md:w-20 bg-[#0041FF] rounded-2xl" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full items-stretch lg:px-38">
             {cartDataFeacher1.map((cart, i) => (
