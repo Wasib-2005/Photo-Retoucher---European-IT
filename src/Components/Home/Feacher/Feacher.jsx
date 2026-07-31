@@ -1,5 +1,5 @@
-import Top_carve from "../../assets/Top_carve.svg";
-import Bottom_carve from "../../assets/Bottom_carve.svg";
+import Top_carve from "../../../assets/Top_carve.svg";
+import Bottom_carve from "../../../assets/Bottom_carve.svg";
 import HomeCart from "./HomeCart";
 import { Link } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
@@ -91,13 +91,13 @@ const Feacher = () => {
       />
 
       {/* Main Content Container */}
-      <div className=" mx-auto px-4 md:px-12 lg:px-20 relative z-10 text-center">
+      <div className="mx-auto px-4 md:px-12 lg:px-20 relative z-10 text-center">
         <div className="flex flex-col justify-center items-center gap-5 md:gap-10">
           <h2 className="text-[#0041FF] font-medium text-[14px] md:text-[16px]">
             WE’RE YOUR VIRTUAL
           </h2>
 
-          <h2 className="text-[#1B263B] text-[20px] md:text-[48px] max-w-190 md:max-w-220 font-semibold ">
+          <h2 className="text-[#1B263B] text-[20px] md:text-[48px] max-w-190 md:max-w-220 font-semibold">
             <span>Professional image editing services to grow your </span>
             <span className="text-[#0041FF]">business</span>
           </h2>
@@ -109,17 +109,15 @@ const Feacher = () => {
 
           <div className="h-1.5 w-20 bg-[#0041FF] rounded-2xl" />
 
-          <div className=" grid md:grid-cols-3 lg:grid-cols-4 gap-8 ">
-            {homeCartData.map((cart) => (
-              <div>
-                <HomeCart cart={cart} />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full items-stretch lg:px-38">
+            {homeCartData.map((cart, i) => (
+              <HomeCart key={i} cart={cart} />
             ))}
           </div>
 
           <Link
             to="/"
-            className="flex md:w-[192px] h-[52px] bg-[#0041FF] hover:bg-[#0036d9] rounded-lg text-white items-center justify-center gap-2 font-medium transition-colors shrink-0"
+            className="flex w-[192px] h-[52px] bg-[#0041FF] hover:bg-[#0036d9] rounded-lg text-white items-center justify-center gap-2 font-medium transition-colors shrink-0"
           >
             <span>View All Services</span>
             <FaArrowRight />
