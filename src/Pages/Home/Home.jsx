@@ -7,6 +7,7 @@ import InfoSection from "../../Components/Home/InfoSection";
 import Feacher from "../../Components/Home/Feacher/Feacher";
 import Feacher1 from "../../Components/Home/Feacher1/Feacher1";
 import Feacher2 from "../../Components/Home/Feacher2/Feacher2";
+import Feacher3 from "../../Components/Home/Feacher3/Feacher3";
 
 const Home = () => {
   return (
@@ -21,6 +22,8 @@ const Home = () => {
           <Feacher />
           <Feacher1/>
           <Feacher2/>
+          <Feacher3/>
+
         </div>
       </div>
     </>

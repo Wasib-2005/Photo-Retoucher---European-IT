@@ -2,3 +2,8 @@
 @import "flowbite-react/plugin/tailwindcss";
 @source "../node_modules/flowbite-react";
 @source "../.flowbite-react/class-list.json";
+
+/* Hide all mark dots visually */
+.rc-slider-dot {
+  display: none !important;
+}
