@@ -6,6 +6,7 @@ import Register from "../../Components/Auth/Register";
 import useAuth from "../../Components/Auth/Hook/useAuth";
 import { useContext } from "react";
 import AuthContext from "../../Context/Auth/AuthContext";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const Auth = () => {
   const { page } = useParams();
@@ -23,6 +24,7 @@ const Auth = () => {
 
   return (
     <>
+      <Navbar />
       <div className="relative w-screen min-h-screen overflow-x-hidden bg-white pt-10 pb-20">
         {/* 1st Image: Top Right (baground) */}
         <img

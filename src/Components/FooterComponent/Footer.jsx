@@ -1,9 +1,10 @@
 
 const Footer = () => {
     return (
-        <div>
+        <footer>
             
-        </div>
+            dsafsfgsd
+        </footer>
     );
 };
 

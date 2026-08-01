@@ -7,12 +7,9 @@ const MainRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/auth/:page", element: <Auth /> },
-      { path: "*" },
-    ],
+    children: [{ path: "/", element: <Home /> }, { path: "*" }],
   },
+  { path: "/auth/:page", element: <Auth /> },
 ]);
 
 export default MainRouter;
