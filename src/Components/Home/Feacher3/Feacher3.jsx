@@ -1,12 +1,9 @@
-import { Link } from "react-router";
 import Bottom_carve from "../../../assets/Bottom_carve.svg";
-import { FaArrowRight } from "react-icons/fa";
 import CalculatePrice from "../../Common/CalculatePrice/CalculatePrice";
 
 const Feacher3 = () => {
   return (
     <section className="bg-[#f0f3fa] relative overflow-hidden py-12 md:py-25 text-[#1B263B] ">
-      {/* Bottom Left Decorative SVG */}
       <img
         src={Bottom_carve}
         alt=""
