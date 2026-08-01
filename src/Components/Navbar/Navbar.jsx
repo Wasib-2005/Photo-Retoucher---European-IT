@@ -3,10 +3,10 @@ import { Link, NavLink } from "react-router";
 import NavIcon from "../../assets/NavIcon.svg";
 import NavbarMenu from "./NavbarMenu";
 import Search from "../../assets/Search.svg";
-import Arrow from "../../assets/Arrow.svg";
 import AuthContext from "../../Context/Auth/AuthContext";
 import { FiLogOut } from "react-icons/fi";
-import useAuth from "./Auth/Hook/useAuth";
+import useAuth from "../Auth/Hook/useAuth";
+import { FaArrowRight } from "react-icons/fa";
 
 const Navbar = () => {
   const [openSearch, setOpenSearch] = useState(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <nav className="px-4 md:px-12 lg:px-20 py-3 bg-white z-50 border-b border-gray-100 text-nowrap fixed top-0 left-0 w-full">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div className="mx-auto flex items-center justify-between gap-4">
         {/* Logo */}
         <NavLink to="/" className="shrink-0">
           <img src={NavIcon} alt="logo" className="w-[145px] h-auto" />
@@ -124,7 +124,7 @@ const Navbar = () => {
                 className="hidden sm:flex w-[192px] h-[52px] bg-[#0041FF] hover:bg-[#0036d9] rounded-lg text-white items-center justify-center gap-2 font-medium transition-colors shrink-0"
               >
                 <span>Get Started Free</span>
-                <img src={Arrow} alt="" className="w-4 h-4" />
+                <FaArrowRight />
               </Link>
             </>
           )}
@@ -200,7 +200,7 @@ const Navbar = () => {
                   className="w-full h-[52px] bg-[#0041FF] text-white rounded-lg font-medium flex items-center justify-center gap-2"
                 >
                   <span>Get Started Free</span>
-                  <img src={Arrow} alt="" className="w-4 h-4" />
+                  <FaArrowRight />
                 </Link>
               </>
             )}

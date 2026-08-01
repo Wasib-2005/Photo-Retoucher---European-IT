@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { PiEyeLight, PiEyeSlash } from "react-icons/pi";
-import LoginPhoto from "../../../assets/Login.png";
-import NavIcon from "../../../assets/NavIcon.svg";
-import Apple from "../../../assets/Apple.svg";
-import Facebook from "../../../assets/Facebook.svg";
-import Google from "../../../assets/Google.svg";
+import RegisterPhoto from "../../assets/Register.png";
+import NavIcon from "../../assets/NavIcon.svg";
+import Apple from "../../assets/Apple.svg";
+import Facebook from "../../assets/Facebook.svg";
+import Google from "../../assets/Google.svg";
 import { Link } from "react-router";
 
-const Login = () => {
+const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="flex w-[70%] h gap-12 mt-20 mx-auto">
-      <div className="w-[47%] border border-[#0041FF] rounded-2xl flex justify-center p-10 bg-white">
+    <div className="flex w-[90%] gap-12 mt-20 mx-auto mb-10">
+      {/* Left Form Card */}
+      <div className="w-[49%] border border-[#0041FF] rounded-2xl flex justify-center p-10 bg-white">
         <div className="w-full flex flex-col gap-4">
           {/* Logo */}
           <div className="flex justify-center mb-6">
@@ -22,7 +23,7 @@ const Login = () => {
           {/* Heading */}
           <div>
             <h2 className="text-[20px] text-[#0041FF] font-semibold">
-              Welcome Back
+              Create your account
             </h2>
             <p className="text-sm text-gray-600">
               Welcome back to us-Let’s get back to your account.
@@ -31,10 +32,28 @@ const Login = () => {
 
           <hr className="border-[#0041FF]" />
 
+          {/* Name Input */}
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="registerName"
+              className="text-[#1B263B] font-semibold text-sm"
+            >
+              Name
+            </label>
+            <input
+              required="true"
+              type="text"
+              name="name"
+              id="registerName"
+              placeholder="Type your name..."
+              className="w-full border border-[#0041FF] rounded-lg px-4 py-2.5 text-sm outline-none focus:ring-1 focus:ring-[#0041FF]"
+            />
+          </div>
+
           {/* Email Input */}
           <div className="flex flex-col gap-1.5">
             <label
-              htmlFor="loginEmail"
+              htmlFor="registerEmail"
               className="text-[#1B263B] font-semibold text-sm"
             >
               Email
@@ -43,16 +62,49 @@ const Login = () => {
               required="true"
               type="email"
               name="email"
-              id="loginEmail"
+              id="registerEmail"
               placeholder="email@gmail.com"
               className="w-full border border-[#0041FF] rounded-lg px-4 py-2.5 text-sm outline-none focus:ring-1 focus:ring-[#0041FF]"
             />
           </div>
 
+          {/* Phone Number Input with Flag Dropdown */}
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="registerPhone"
+              className="text-[#1B263B] font-semibold text-sm"
+            >
+              Phone number
+            </label>
+            <div className="flex border border-[#0041FF] rounded-lg overflow-hidden focus-within:ring-1 focus-within:ring-[#0041FF]">
+              {/* Country Code Select */}
+              <select
+                defaultValue="+880"
+                className="bg-gray-50  px-2.5 py-2.5 text-sm outline-none cursor-pointer text-[#1B263B] font-medium shrink-0 "
+              >
+                <option value="+880">🇧🇩</option>
+                <option value="+1">🇺🇸</option>
+                <option value="+44">🇬🇧</option>
+                <option value="+91">🇮🇳</option>
+                <option value="+971">🇦🇪</option>
+              </select>
+
+              {/* Phone Number Field */}
+              <input
+                required="true"
+                type="tel"
+                name="phone"
+                id="registerPhone"
+                placeholder="1705-0001111"
+                className="w-full px-4 py-2.5 text-sm outline-none bg-transparent"
+              />
+            </div>
+          </div>
+
           {/* Password Input with Eye Icon inside */}
           <div className="flex flex-col gap-1.5">
             <label
-              htmlFor="loginPassword"
+              htmlFor="registerPassword"
               className="text-[#1B263B] font-semibold text-sm"
             >
               Password
@@ -62,7 +114,7 @@ const Login = () => {
                 required="true"
                 type={showPassword ? "text" : "password"}
                 name="password"
-                id="loginPassword"
+                id="registerPassword"
                 placeholder="********"
                 className="w-full border border-[#0041FF] rounded-lg px-4 py-2.5 pr-10 text-sm outline-none focus:ring-1 focus:ring-[#0041FF]"
               />
@@ -80,7 +132,7 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Remember Password & Forgot Password Row */}
+          {/* Remember Password & Login? Link */}
           <div className="flex items-center justify-between text-sm py-1">
             <label className="flex items-center gap-2 cursor-pointer text-[#1B263B]">
               <input
@@ -90,8 +142,11 @@ const Login = () => {
               />
               <span>Remember Password!</span>
             </label>
-            <Link to="#" className="text-[#0041FF] hover:underline font-medium">
-              Forgot Password?
+            <Link
+              to="/auth/login"
+              className="text-[#0041FF] hover:underline font-medium"
+            >
+              Login?
             </Link>
           </div>
 
@@ -100,7 +155,7 @@ const Login = () => {
             type="submit"
             className="w-full bg-[#0041FF] text-white font-bold py-3 rounded-lg hover:bg-[#0036d9] transition-colors"
           >
-            Sign In
+            Sign Up
           </button>
 
           {/* Divider */}
@@ -114,19 +169,19 @@ const Login = () => {
           <div className="flex justify-center items-center gap-4">
             <button
               type="button"
-              className="p-2.5 rounded-xl hover:border-[#0041FF] hover:bg-[#0041FF]/5 transition-all"
+              className="p-2.5 border border-gray-200 rounded-xl hover:border-[#0041FF] hover:bg-[#0041FF]/5 transition-all"
             >
               <img src={Google} alt="Google" className="w-5 h-5" />
             </button>
             <button
               type="button"
-              className="p-2.5 rounded-xl hover:border-[#0041FF] hover:bg-[#0041FF]/5 transition-all"
+              className="p-2.5 border border-gray-200 rounded-xl hover:border-[#0041FF] hover:bg-[#0041FF]/5 transition-all"
             >
               <img src={Facebook} alt="Facebook" className="w-5 h-5" />
             </button>
             <button
               type="button"
-              className="p-2.5 rounded-xl hover:border-[#0041FF] hover:bg-[#0041FF]/5 transition-all"
+              className="p-2.5 border border-gray-200 rounded-xl hover:border-[#0041FF] hover:bg-[#0041FF]/5 transition-all"
             >
               <img src={Apple} alt="Apple" className="w-5 h-5" />
             </button>
@@ -134,22 +189,22 @@ const Login = () => {
 
           {/* Footer Text */}
           <p className="text-center text-sm text-gray-600 mt-2">
-            Don’t have an account?{" "}
+            Have an account?{" "}
             <Link
-              to="/auth/register"
+              to="/auth/login"
               className="text-[#0041FF] font-semibold hover:underline"
             >
-              Register now!
+              Login now!
             </Link>
           </p>
         </div>
       </div>
 
       {/* Right Image */}
-      <div className="w-[53%] flex items-center">
+      <div className="w-[51%] flex items-center">
         <img
-          src={LoginPhoto}
-          alt="Login Illustration"
+          src={RegisterPhoto}
+          alt="Register Illustration"
           className="w-full h-full "
         />
       </div>
@@ -157,4 +212,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
