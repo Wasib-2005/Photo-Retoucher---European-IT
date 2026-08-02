@@ -7,7 +7,8 @@ import FooterFacebook from "../../../assets/FooterFacebook.svg";
 import FooterInsta from "../../../assets/FooterInsta.svg";
 import FooterLinkdin from "../../../assets/FooterLinkdin.svg";
 import FooterPinster from "../../../assets/FooterPinster.svg";
-import { NavLink } from "react-router";
+import Gard from "../../../assets/Gard.svg";
+import { Link, NavLink } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
 import { MdOutlineEmail, MdOutlineLocalPhone } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
@@ -137,12 +138,12 @@ const Pices2 = () => {
                 <MdOutlineEmail size={18} />
                 <a href="mailto:hello@pathedits.com">hello@pathedits.com</a>
               </p>
-             
+
               <p className="flex items-center gap-1">
                 <MdOutlineLocalPhone size={18} />
                 <a href="tel:855737-0370">US toll-free: (855) 737-0370</a>
               </p>
-             
+
               <p className="flex items-center gap-1">
                 <MdOutlineLocalPhone size={18} />
                 <a href="tel:+448081960370">UK toll-free: +44 8081 960370</a>
@@ -150,9 +151,37 @@ const Pices2 = () => {
 
               <p className="flex items-center gap-1">
                 <IoLocationOutline size={18} />
-                <a href="https://en.wikipedia.org/wiki/HTTP_404">heeeeeello@gamil.com</a>
+                <a href="https://en.wikipedia.org/wiki/HTTP_404">
+                  heeeeeello@gamil.com
+                </a>
               </p>
             </div>
+
+            <div className="px-4 py-5 flex items-center gap-2.5 border border-[#0041FF] bg-[#dcdcff] rounded-2xl w-fit">
+              <div>
+                <img src={Gard} alt="" />
+              </div>
+              <div>
+                <h2 className=" text-[#0041FF] ">100% Security Guaranteed</h2>
+                <p className="text-[#1B263B] text-[14px]">
+                  Your images are safe with us.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="border-[#b5b9bd] mt-10" />
+        <div className="mt-16 text-black flex flex-col md:flex-row justify-between gap-5">
+          <p className="">
+            Path is a brand of Outsource Experts Ltd. © 2025 All rights
+            reserved.
+          </p>
+          <div className=" flex flex-col md:flex-row justify-center md:gap-5">
+            <Link className=" hover:text-[#0041FF]">Privacy policy</Link>
+            <div className="hidden md:block bg-[#b5b9bd] w-px self-stretch" />
+            <Link className=" hover:text-[#0041FF]">Terms & Conditions</Link>
+            <div className="hidden md:block bg-[#b5b9bd] w-px self-stretch" />
+            <Link className=" hover:text-[#0041FF]">Help & Support</Link>
           </div>
         </div>
       </div>
