@@ -98,7 +98,7 @@ const Pices2 = () => {
                     {e?.name}
                   </NavLink>
                 ))}
-                <NavLink to="/" className={navClass}>
+                <NavLink to="/service" className={"text-[#0041FF] flex items-center gap-1"}>
                   <span>View all services</span>
                   <FaArrowRight size={12} />
                 </NavLink>
@@ -171,7 +171,7 @@ const Pices2 = () => {
           </div>
         </div>
         <hr className="border-[#b5b9bd] mt-10" />
-        <div className="mt-16 text-black flex flex-col md:flex-row justify-between gap-5">
+        <div className="mt-4 text-black flex flex-col md:flex-row justify-between gap-5">
           <p className="">
             Path is a brand of Outsource Experts Ltd. © 2025 All rights
             reserved.

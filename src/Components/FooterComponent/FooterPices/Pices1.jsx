@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Pices1 = () => {
   return (
-    <div className="px-4 md:px-12 lg:px-20 relative mt-12 md:mt-20">
+    <div className="px-4 md:px-12 lg:px-20 relative pt-12 md:pt-20">
       <div className="relative min-h-[420px] md:min-h-[360px] w-full rounded-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between p-6 sm:p-8 md:px-16 md:py-8 text-white">
         <div className="absolute inset-0 z-0 flex flex-col md:flex-row">
           <img

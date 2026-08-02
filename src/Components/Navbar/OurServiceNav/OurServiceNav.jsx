@@ -13,10 +13,15 @@ const OurServiceNav = ({ onItemClick, navClass }) => {
   const isNavActive = ourServiceNavOpen || locationArray.includes("service");
 
   return (
-    <div className=" w-full lg:w-auto text-left">
-      <button
+    <div
+      onMouseLeave={() => setOurServiceNavOpen(false)}
+      className=" w-full lg:w-auto text-left"
+    >
+      <NavLink
+        to={"service"}
         type="button"
         onClick={() => setOurServiceNavOpen((prev) => !prev)}
+        onMouseEnter={() => setOurServiceNavOpen(true)}
         className="flex items-center justify-between lg:justify-start w-full lg:w-auto py-1 gap-1 focus:outline-none cursor-pointer"
       >
         <span
@@ -32,7 +37,7 @@ const OurServiceNav = ({ onItemClick, navClass }) => {
           } ${ourServiceNavOpen ? "rotate-180" : ""}`}
           size={17}
         />
-      </button>
+      </NavLink>
 
       <div
         className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out flex flex-col md:absolute bg-white md:border md:border-gray-300/50 md:rounded-2xl ${
@@ -45,6 +50,7 @@ const OurServiceNav = ({ onItemClick, navClass }) => {
           {services?.map((service, i) => (
             <NavLink
               to={`service/${service.path}`}
+              onClick={() => setOurServiceNavOpen(false)}
               key={`navOurService-${i}`}
               onClick={() => {
                 setOurServiceNavOpen(false);
@@ -55,6 +61,14 @@ const OurServiceNav = ({ onItemClick, navClass }) => {
               {service.name}
             </NavLink>
           ))}
+
+          <NavLink
+            to="/service"
+            onClick={() => setOurServiceNavOpen(false)}
+            className="flex text-[#0041FF] hover:text-[#0036d9] rounded-lg  items-center justify-center gap-2 font-medium transition-colors shrink-0"
+          >
+            <span>View All Services</span>
+          </NavLink>
         </div>
       </div>
     </div>

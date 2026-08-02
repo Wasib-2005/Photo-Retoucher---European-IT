@@ -114,7 +114,7 @@ const Feacher = () => {
           </div>
 
           <Link
-            to="/"
+            to="/service"
             className="flex w-[192px] h-[52px] bg-[#0041FF] hover:bg-[#0036d9] rounded-lg text-white items-center justify-center gap-2 font-medium transition-colors shrink-0"
           >
             <span>View All Services</span>
