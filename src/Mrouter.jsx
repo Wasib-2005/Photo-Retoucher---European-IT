@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router"; // Changed to react-router-d
 import App from "./App";
 import Auth from "./Pages/Auth/Auth";
 import Home from "./Pages/Home/Home";
+import OurServices from "./Pages/OurServices/OurServices";
+import ServiceDetiallsPage from "./Pages/ServiceDetialls/ServiceDetiallsPage";
 
 const MainRouter = createBrowserRouter([
   {
@@ -9,10 +11,13 @@ const MainRouter = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/auth/:page", element: <Auth /> },
+      { path: "/service", element: <OurServices /> },
+      { path: "/service/:serviceName", element: <ServiceDetiallsPage /> },
+
       { path: "*" },
     ],
   },
+  { path: "/auth/:page", element: <Auth /> },
 ]);
 
 export default MainRouter;

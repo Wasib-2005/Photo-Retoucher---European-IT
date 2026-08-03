@@ -74,7 +74,6 @@ const Feacher = () => {
 
   return (
     <section className="bg-[#f0f3fa] relative overflow-hidden py-12 md:py-25 text-[#1B263B]">
-      {/* Top Right Decorative SVG */}
       <img
         src={Top_carve}
         alt=""
@@ -82,7 +81,6 @@ const Feacher = () => {
         className="absolute top-0 left-0 max-w-[15%] pointer-events-none select-none z-0"
       />
 
-      {/* Bottom Left Decorative SVG */}
       <img
         src={Bottom_carve}
         alt=""
@@ -116,7 +114,7 @@ const Feacher = () => {
           </div>
 
           <Link
-            to="/"
+            to="/service"
             className="flex w-[192px] h-[52px] bg-[#0041FF] hover:bg-[#0036d9] rounded-lg text-white items-center justify-center gap-2 font-medium transition-colors shrink-0"
           >
             <span>View All Services</span>

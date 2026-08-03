@@ -1,22 +1,15 @@
 import { Select } from "flowbite-react";
 import SelectRadio from "./SelectRadio";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PhotoSelectionUnit from "./PhotoSelectionUnit";
 import Percentige from "../../../assets/Percentige.svg";
 import Secure from "../../../assets/Secure.svg";
 import { Link } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
+import ServicesContext from "../../../Context/Services/ServicesContext";
 
 const CalculatePrice = () => {
-  const services = [
-    "Clipping Path",
-    "Images Masking",
-    "Photo Retouching",
-    "Ghost Mannequin",
-    "Color Correction",
-    "Drop Shadow",
-    "Image editing",
-  ];
+  const { services } = useContext(ServicesContext);
 
   const minMaxNumberOfPhoto = { min: 1, max: 500, differentValue: 100 };
 
@@ -94,7 +87,7 @@ const CalculatePrice = () => {
 
             <div className="">
               <Select
-                selected={selectedService}
+                selected={selectedService?.name}
                 onChange={(e) => setSelectedService(e.target.value)}
                 id="service-select"
                 theme={{
@@ -106,8 +99,8 @@ const CalculatePrice = () => {
                 }}
               >
                 {services.map((Service, i) => (
-                  <option key={("Service", i)} value={Service}>
-                    {Service}
+                  <option key={("Service", i)} value={Service?.path}>
+                    {Service?.name}
                   </option>
                 ))}
               </Select>
@@ -176,7 +169,7 @@ const CalculatePrice = () => {
               <p className="flex justify-between">
                 <span>Service</span>
                 <span className="font-medium text-[#1B263B]">
-                  {selectedService}
+                  {selectedService?.name}
                 </span>
               </p>
 

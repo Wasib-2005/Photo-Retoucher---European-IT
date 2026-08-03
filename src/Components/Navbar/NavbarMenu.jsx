@@ -1,5 +1,6 @@
 import { IoIosArrowDown } from "react-icons/io";
 import { NavLink } from "react-router";
+import OurServiceNav from "./OurServiceNav/OurServiceNav";
 
 const NavbarMenu = ({ onItemClick }) => {
   const navClass = ({ isActive }) =>
@@ -9,18 +10,7 @@ const NavbarMenu = ({ onItemClick }) => {
 
   return (
     <>
-      <NavLink
-        to="/services"
-        onClick={onItemClick}
-        className={({ isActive }) =>
-          `transition-colors hover:text-[#0041FF] flex items-center gap-1.25 py-1  font-semibold ${
-            isActive ? "text-[#0041FF]" : "text-black"
-          }`
-        }
-      >
-        <span>Our Services</span>
-        <IoIosArrowDown size={17} />
-      </NavLink>
+      <OurServiceNav onItemClick={onItemClick} navClass={navClass}/>
 
       <NavLink to="/about" onClick={onItemClick} className={navClass}>
         About us
