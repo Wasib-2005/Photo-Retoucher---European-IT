@@ -4,6 +4,7 @@ import Auth from "./Pages/Auth/Auth";
 import Home from "./Pages/Home/Home";
 import OurServices from "./Pages/OurServices/OurServices";
 import ServiceDetiallsPage from "./Pages/ServiceDetialls/ServiceDetiallsPage";
+import HowItWorkPage from "./Pages/HowItWorkPage/HowItWorkPage";
 
 const MainRouter = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const MainRouter = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/service", element: <OurServices /> },
       { path: "/service/:serviceName", element: <ServiceDetiallsPage /> },
+      { path: "/how-it-works", element: <HowItWorkPage /> },
 
       { path: "*" },
     ],
