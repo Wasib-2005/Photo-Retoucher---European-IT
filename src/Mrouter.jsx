@@ -6,6 +6,7 @@ import OurServices from "./Pages/OurServices/OurServices";
 import ServiceDetiallsPage from "./Pages/ServiceDetialls/ServiceDetiallsPage";
 import HowItWorkPage from "./Pages/HowItWorkPage/HowItWorkPage";
 import Blog from "./Pages/Blog/Blog";
+import ReadBlog from "./Pages/ReadBlog/ReadBlog";
 
 const MainRouter = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const MainRouter = createBrowserRouter([
       { path: "/service/:serviceName", element: <ServiceDetiallsPage /> },
       { path: "/how-it-works", element: <HowItWorkPage /> },
       { path: "/blog", element: <Blog /> },
+      { path: "/blog/:blogId", element: <ReadBlog /> },
 
       { path: "*" },
     ],

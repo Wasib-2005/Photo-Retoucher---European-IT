@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const Blog2Cart = ({ blogData }) => {
   return (
     <Link
-    to={blogData?._id}
+    to={`/blog/${blogData?._id}`}
      className="flex flex-col gap-6 bg-[#f3f4f6] rounded-2xl max-w-160">
       <img className="w-full" src={blogData?.img} alt="" />
       <div className="flex flex-col gap-2 text-[12px] text-[#1B263B] px-6 pb-7">
