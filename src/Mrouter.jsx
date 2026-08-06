@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 import OurServices from "./Pages/OurServices/OurServices";
 import ServiceDetiallsPage from "./Pages/ServiceDetialls/ServiceDetiallsPage";
 import HowItWorkPage from "./Pages/HowItWorkPage/HowItWorkPage";
+import Blog from "./Pages/Blog/Blog";
 
 const MainRouter = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const MainRouter = createBrowserRouter([
       { path: "/service", element: <OurServices /> },
       { path: "/service/:serviceName", element: <ServiceDetiallsPage /> },
       { path: "/how-it-works", element: <HowItWorkPage /> },
+      { path: "/blog", element: <Blog /> },
 
       { path: "*" },
     ],
