@@ -1,6 +1,4 @@
-import { Link } from "react-router";
 import Left_crave from "../../../assets/Left_crave.svg";
-import { FaArrowRight } from "react-icons/fa";
 import CommonFeacher2 from "../../Common/CommonFeacher2";
 
 const Feacher2 = () => {

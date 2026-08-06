@@ -98,7 +98,10 @@ const Pices2 = () => {
                     {e?.name}
                   </NavLink>
                 ))}
-                <NavLink to="/service" className={"text-[#0041FF] flex items-center gap-1"}>
+                <NavLink
+                  to="/service"
+                  className={"text-[#0041FF] flex items-center gap-1"}
+                >
                   <span>View all services</span>
                   <FaArrowRight size={12} />
                 </NavLink>
@@ -177,7 +180,9 @@ const Pices2 = () => {
             reserved.
           </p>
           <div className=" flex flex-col md:flex-row justify-center md:gap-5">
-            <Link className=" hover:text-[#0041FF]">Privacy policy</Link>
+            <Link to={"/privacy"} className=" hover:text-[#0041FF]">
+              Privacy policy
+            </Link>
             <div className="hidden md:block bg-[#b5b9bd] w-px self-stretch" />
             <Link className=" hover:text-[#0041FF]">Terms & Conditions</Link>
             <div className="hidden md:block bg-[#b5b9bd] w-px self-stretch" />
